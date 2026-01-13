@@ -28,7 +28,7 @@ def convert_notebook_to_html(notebook_path):
 
     output_dir = path.parent.parent / "html"
 
-    cmd = f"jupyter nbconvert --to html --execute --ExecutePreprocessor.timeout=30 --output-dir {output_dir} {path.absolute()}"
+    cmd = f" nbconvert --to html --execute --ExecutePreprocessor.timeout=30 --output-dir {output_dir} {path.absolute()}"
     subprocess.check_call(cmd.split())
 
 
